@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Meal For Your Ingredients</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel = "stylesheet" href = "main.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-15TTFYHVLS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-15TTFYHVLS');
+</script>
+</head>
+<style>
+  .sprite{
+  position: absolute;
+      width: 30%;
+      height: 50px;
+      left: 35%;
+  }
+  .first{
+    position: relative;
+    left: 20%;
+    top: 10px;
+    font-size: 25px; 
+    font-family: 'Times New Roman', Times, serif; 
+    color: rgb(255, 255, 255); 
+    background-color: rgb(0, 157, 255); 
+    border: solid rgb(255, 255, 255); 
+    border-radius: 5rem;
+    padding: 5px;
+  }
+  .second{
+    position: relative;
+    left: 62%;
+    top: 10px;
+    font-size: 25px; 
+    font-family:'Times New Roman', Times, serif; 
+    color: rgb(255, 255, 255); 
+    background-color: rgb(0, 157, 255); 
+    border: solid rgb(255, 255, 255); 
+    border-radius: 5rem;
+    padding: 5px;
+  }
+  .nav{
+    height: 72px;
+    border:5px solid rgb(0, 157, 255);
+    border-radius: 0px 2rem;
+    background-color: rgb(0, 157, 255);
+  }
+  .left{
+    position: absolute; 
+    height: 510px;
+    width: 270px;
+    margin: 15px;
+    padding: 5px;
+  }
+  .right{
+    position: absolute;
+    right: 10px;
+    height: 510px;
+    width: 270px;
+    margin: 15px;
+    padding: 5px;
+  }
+  img{
+    border: solid transparent;
+  }
+  li{
+    list-style-type: none;
+    font-family: cursive;
+    font-size: 1.5rem;
+    color: rgb(0, 157, 255);
+    margin-left: 50px;
+    border: solid rgb(0, 157, 255);
+    border-radius: 2rem;
+    background-color: rgb(0, 157, 255);
+    color: aliceblue;
+    text-align: center;
+    margin: 3px;
+  }
+marquee>img{
+  border: solid transparent;
+  border-radius: 3rem;
+}
+</style>
+<body>
+  <div class="nav">
+    <span class="first">Connect Us</span>
+  <img src="Screenshot 2024-02-26 133907.png" alt="image sprite" usemap="#shapemap" class="sprite">
+     
+  <map name="shapemap">
+       
+      <area shape="rect" coords="0, 0, 69, 76" href="https://www.facebook.com/"
+      alt="Square"> 
+      
+      <area shape="rect" coords="150, 3, 218, 69" href="https://www.linkedin.com/feed/"
+      alt="Square"> 
+  </map> 
+
+
+  <span class="second">Connect Us</span>
+  </div>
+  <div class="left">
+    <marquee behavior="" direction="up" scrollamount="10">
+      <h1 style="color:rgb(0, 157, 255); font-family: cursive; margin-left: 55px;">Welcome</h1>
+      <img src="welcome-removebg-preview.png" alt="" style="height: 122px; position: relative; left: 3rem; filter: drop-shadow(5px 1px rgb(0, 157, 255));">
+
+      <img src="bruger.jpeg" alt="" style="width: 122px;">
+    <img src="idli.jpeg" alt="" style="width: 122px; height: 90px;">
+    <img src="img.jpeg" alt="" style="width: 122px;">
+    <img src="dosa.jpeg" alt="" style="width: 122px; height: 90px;">
+    <img src="pizza.jpeg" alt="" style="width: 122px;">
+    <img src="food.jpg" alt="" style="width: 122px; height: 90px;">
+    
+    
+    
+    
+    </marquee>
+    
+  </div>
+  <div class="right">
+    <marquee behavior="" direction="down" scrollamount="10">
+      <li>North Indian</li>
+      <li>South Indian</li>
+      <li>Rajasthani</li>
+      <li>Bengali</li>
+      <li>North Indian</li>
+      <li>South Indian</li>
+      <li>Rajasthani</li>
+      <li>Bengali</li>
+      <li>North Indian</li>
+      <li>South Indian</li>
+      
+    
+    </marquee>
+    
+  </div>
+  <div class = "container">
+    <div class = "meal-wrapper">
+      <div class = "meal-search">
+        <h1 class = "title">Find Meals For Your Ingredients</h1>
+        <h2 class="title">Food is the Ingredient that binds us Together</h2>
+        <blockquote>Real food doesn't have ingredients, real food is ingredients.<br>
+          <cite>- Jamie Oliver</cite>
+        </blockquote>
+
+        <div><br>
+          <h3 style="font-family: 'Courier New', Courier, monospace; font-style: italic; font-size:larger;">||You Can Search Food Item By Ingredient Input||</h3><br>
+        </div>
+        <div class = "meal-search-box">
+          <input type = "text" class = "search-control" placeholder="Enter an Ingredient" id = "search-input">
+          <button type = "submit" class = "search-btn btn" id = "search-btn">
+            <i class = "fas fa-search"></i> 
+          </button>
+        </div>
+      </div>
+
+      <div class = "meal-result">
+        <h2 class = "title">Your Search Results:</h2>
+        <div id= "meal">
+          
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "food.jpg" alt = "food">
+            </div>
+            <div class = "meal-name">
+              <h3>Potato Chips</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "manchurian.jpeg" alt = "food" style="width:100% ; height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Manchurian</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "noodles.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Noodles</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "spring.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Spring Rolls</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "bruger.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Burger</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "pizza.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Pizza</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "dosa.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Masala Dosa</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "idli.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Idli</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+
+          <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "pao_bhaji.jpeg" alt = "food" style="height: 260px;">
+            </div>
+            <div class = "meal-name">
+              <h3>Pao Bhaji</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+
+
+      <div class = "meal-details">
+       
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+          <i class = "fas fa-times"></i>
+        </button>
+
+       
+        <div class = "meal-details-content">
+          <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src = "script.js"></script>
+</body>
+</html>
+
+
+
+<!-- <style>
+  @font-face {
+    font-family: openSans;
+    src: url(fonts/openSans-Regular-webfont.eot),
+    url(fonts/openSans-regular-webfonr.woff)
+    ;
+  }
+  h1{
+    font-family: openSans;
+  }
+  #box{
+    font-family: openSnas;
+  }
+</style> -->

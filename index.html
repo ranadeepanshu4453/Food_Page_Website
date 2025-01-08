@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- <video autoplay muted loop src="login.mp4" style="height: 90%; width: 100%;"></video> -->
+  <div class="wrapper">
+    <form id="loginForm">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" id="usr" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="pswrd" required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <button type="button" class="btn" onclick="checkCredentials()" value="submit">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
+  <script>
+    function checkCredentials() {
+      let usr = document.getElementById("usr").value;
+      let pswrd = document.getElementById("pswrd").value;
+
+      if (usr === "Deepanshu" && pswrd === "rana") {
+        window.location.href = "main.html"; 
+      } else {
+        alert("Invalid username or password. Please try again."); 
+      }
+    }
+  </script>
+</body>
+</html>
